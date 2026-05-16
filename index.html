@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Self Researcher 技术支持</title>
+  <meta name="description" content="Self Researcher app technical support and contact information.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5fbf8;
+      --card: rgba(255, 255, 255, 0.82);
+      --text: #15231f;
+      --muted: #5f726c;
+      --line: rgba(45, 103, 87, 0.16);
+      --accent: #2d8f68;
+      --accent-soft: #dff4ec;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(116, 202, 177, 0.24), transparent 34rem),
+        radial-gradient(circle at 100% 15%, rgba(116, 182, 230, 0.20), transparent 30rem),
+        var(--bg);
+      line-height: 1.65;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0;
+    }
+
+    .hero {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--card);
+      box-shadow: 0 24px 70px rgba(31, 92, 72, 0.12);
+      backdrop-filter: blur(18px);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: #17634a;
+      background: var(--accent-soft);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 22px 0 12px;
+      font-size: clamp(34px, 7vw, 58px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 720px) {
+      main { padding: 28px 0; }
+      .hero { padding: 24px; border-radius: 24px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <span class="badge">Self Researcher Support</span>
+      <h1>技术支持</h1>
+      <p>
+        Self Researcher 帮助用户整理 Apple Health 健康数据、查看趋势，并在用户自愿配置 AI 服务后生成非医疗诊断性质的健康分析。
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h2>联系我们</h2>
+          <p>如果你遇到功能问题、订阅问题、数据展示异常，或希望提出功能建议，请通过邮件联系：</p>
+          <p style="margin-top: 10px;"><a href="mailto:2716288374@qq.com">2716288374@qq.com</a></p>
+        </article>
+
+        <article class="card">
+          <h2>常见问题</h2>
+          <ul>
+            <li>健康数据来自 Apple Health，需要用户主动授权。</li>
+            <li>AI Token 由用户自行填写，保存在本机。</li>
+            <li>订阅由 Apple App Store 处理，可在系统订阅管理中取消或恢复。</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>隐私</h2>
+          <p>我们重视健康数据隐私。你可以查看隐私政策了解数据使用方式。</p>
+          <p style="margin-top: 10px;"><a href="./privacy.html">查看隐私政策</a></p>
+        </article>
+
+        <article class="card">
+          <h2>免责声明</h2>
+          <p>Self Researcher 提供健康数据整理和生活方式参考，不构成医疗诊断、治疗建议或紧急医疗服务。</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Self Researcher. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>

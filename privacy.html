@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Self Researcher 隐私政策</title>
+  <meta name="description" content="Self Researcher privacy policy.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5fbf8;
+      --card: rgba(255, 255, 255, 0.84);
+      --text: #15231f;
+      --muted: #5f726c;
+      --line: rgba(45, 103, 87, 0.16);
+      --accent: #2d8f68;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(116, 202, 177, 0.22), transparent 34rem),
+        var(--bg);
+      line-height: 1.72;
+    }
+
+    main {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 52px 0;
+    }
+
+    article {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--card);
+      box-shadow: 0 24px 70px rgba(31, 92, 72, 0.12);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(32px, 7vw, 52px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 30px 0 8px;
+      font-size: 22px;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 720px) {
+      main { padding: 28px 0; }
+      article { padding: 24px; border-radius: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>隐私政策</h1>
+      <p>生效日期：2026 年 5 月 16 日</p>
+
+      <h2>我们收集的数据</h2>
+      <p>
+        Self Researcher 会在用户授权后读取 Apple Health 中的健康数据，例如步数、心率、HRV、睡眠、活动能量、呼吸频率等，用于本机趋势展示和用户主动发起的 AI 分析。
+      </p>
+
+      <h2>AI Token 与第三方 AI 服务</h2>
+      <p>
+        App 支持用户自行填写 AI 服务商的 API Token。Token 保存在用户设备本机，仅用于用户选择的 AI 服务商请求。用户发起 AI 分析时，相关健康摘要数据会发送给用户选择的 AI 服务商以生成分析结果。
+      </p>
+
+      <h2>数据存储</h2>
+      <p>
+        健康趋势、分析记录、AI 配置和用户资料主要保存在设备本机。我们不运营独立服务器来集中存储用户健康数据。
+      </p>
+
+      <h2>订阅与付款</h2>
+      <p>
+        订阅购买、续订、退款和取消由 Apple App Store 处理。App 仅通过 StoreKit 读取订阅状态，用于解锁 30 天 AI 分析和高阶统计特征。
+      </p>
+
+      <h2>非医疗诊断</h2>
+      <p>
+        Self Researcher 的分析结果仅供健康管理和生活方式参考，不构成医疗诊断、治疗建议或紧急医疗服务。如有身体不适，请咨询专业医疗机构。
+      </p>
+
+      <h2>联系我们</h2>
+      <p>
+        如需删除本机数据、反馈隐私问题或咨询 App 使用问题，请发送邮件至
+        <a href="mailto:2716288374@qq.com">2716288374@qq.com</a>。
+      </p>
+
+      <p style="margin-top: 28px;"><a href="./support.html">返回技术支持</a></p>
+    </article>
+
+    <footer>
+      © 2026 Self Researcher. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
