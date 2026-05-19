@@ -90,10 +90,19 @@
       <p>
         Self Researcher 会在用户授权后读取 Apple Health 中的健康数据，例如步数、心率、HRV、睡眠、活动能量、呼吸频率等，用于本机趋势展示和用户主动发起的 AI 分析。
       </p>
+      <p>
+        应用还会在本机保存用户主动填写的资料卡信息（例如年龄、性别）、AI 模型配置、分析历史和恢复记录，用于生成更符合个人情况的健康参考。
+      </p>
 
       <h2>AI Token 与第三方 AI 服务</h2>
       <p>
-        App 支持用户自行填写 AI 服务商的 API Token。Token 保存在用户设备本机，仅用于用户选择的 AI 服务商请求。用户发起 AI 分析时，相关健康摘要数据会发送给用户选择的 AI 服务商以生成分析结果。
+        App 支持用户自行选择第三方 AI 服务商并填写 API Token，例如 DeepSeek、通义千问、智谱 GLM、Moonshot、硅基流动、OpenAI 兼容接口或用户自定义服务。Token 保存在用户设备本机 Keychain，仅用于用户选择的 AI 服务商请求。
+      </p>
+      <p>
+        只有当用户主动发起 AI 分析，并在应用内确认“同意并发送给 AI 分析”后，应用才会把本次所需的健康摘要、统计特征、资料卡信息和分析侧重点发送给用户选择的第三方 AI 服务商。应用不会发送 Apple ID、通讯录、精确定位或 HealthKit 全量原始记录。
+      </p>
+      <p>
+        用户应确认自己选择的第三方 AI 服务商具有适当的数据保护措施，并阅读该服务商的隐私政策。Self Researcher 不会将健康数据用于广告追踪，也不会出售用户数据。
       </p>
 
       <h2>数据存储</h2>
@@ -103,7 +112,7 @@
 
       <h2>订阅与付款</h2>
       <p>
-        订阅购买、续订、退款和取消由 Apple App Store 处理。App 仅通过 StoreKit 读取订阅状态，用于解锁 30 天 AI 分析和高阶统计特征。
+        订阅购买、续订、退款和取消由 Apple App Store 处理。App 仅通过 StoreKit 读取订阅状态，用于解锁全部可用历史特征萃取和高阶统计。
       </p>
 
       <h2>非医疗诊断</h2>
@@ -117,7 +126,11 @@
         <a href="mailto:2716288374@qq.com">2716288374@qq.com</a>。
       </p>
 
-      <p style="margin-top: 28px;"><a href="./support.html">返回技术支持</a></p>
+      <p style="margin-top: 28px;">
+        <a href="./terms.html">查看服务条款</a> ·
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple 标准 EULA</a> ·
+        <a href="./support.html">返回技术支持</a>
+      </p>
     </article>
 
     <footer>
