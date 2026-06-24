@@ -84,14 +84,14 @@
   <main>
     <article>
       <h1>隐私政策</h1>
-      <p>生效日期：2026 年 6 月 15 日</p>
+      <p>生效日期：2026 年 6 月 24 日</p>
 
       <h2>我们收集哪些数据</h2>
       <p>
         Self Researcher 会在用户通过 Apple Health 授权后读取与健康和健身功能相关的数据，例如步数、心率、静息心率、心率变异性（HRV）、睡眠、活动能量、锻炼时间、锻炼记录、步行跑步距离、呼吸频率和血氧等。运动恢复功能还会读取训练内心率和锻炼结束后 3 分钟内的短时心率窗口。应用只读取用户授权的 HealthKit 数据。
       </p>
       <p>
-        应用还会在设备本机保存用户主动选择填写的资料卡信息（例如年龄和性别）、AI 模型配置、分析历史、锻炼 AI 复盘和订阅状态。年龄和性别为可选项；用户可以跳过并使用宽泛成年人参考，之后也可以在设置中补充或修改。这些数据用于本机趋势展示、生成用户主动请求的 AI 分析、保存分析记录，以及解锁订阅功能。HealthKit 中的锻炼与心率样本不会作为副本长期保存在应用中，每次展示时从 Apple Health 重新读取。
+        应用还会在设备本机保存用户主动选择填写的资料卡信息（例如年龄和性别）、训练复盘补充问卷（例如训练目标、训练类型或部位、主观强度、身体感受和后续计划）、AI 模型配置、自动分析设置、分析历史、锻炼 AI 复盘和订阅状态。年龄、性别和训练复盘补充均为可选项；用户可以跳过，之后也可以在设置或分析流程中补充或修改。这些数据用于本机趋势展示、生成用户主动请求或明确开启的自动 AI 分析、保存分析记录，以及解锁订阅功能。HealthKit 中的锻炼与心率样本不会作为副本长期保存在应用中，每次展示时从 Apple Health 重新读取。
       </p>
       <p>
         运动恢复只读取 Apple Health 中已经存在的锻炼记录。Self Researcher 不会创建、修改或删除 Apple Health 中的锻炼；Apple Watch 端也不会启动额外的临时 Workout。
@@ -105,6 +105,17 @@
         Self Researcher 不会将 HealthKit 数据、AI 分析内容或用户资料用于广告、营销、跨 App 跟踪或出售。应用不读取 Apple ID、通讯录或精确定位，也不会发送未经授权的数据。
       </p>
 
+      <h2>自动分析与通知</h2>
+      <p>
+        用户可以选择开启自动分析功能，例如每天在指定时间进行一次深度分析，或在检测到 Apple Fitness/Apple Health 中新增且时长超过用户设定阈值的锻炼记录后生成运动恢复分析。自动分析默认关闭；只有用户在 App 内主动开启相应开关后才会运行。用户可以随时在设置中关闭自动分析、调整每日分析时间、调整新运动最短时长阈值，或关闭分析完成通知。
+      </p>
+      <p>
+        自动分析触发时，App 只发送该次分析需要的健康摘要和上下文：每日深度分析会使用所选范围的健康摘要、资料卡、关注方向、个人模式证据和必要的历史分析摘要；新运动自动分析会使用该次锻炼摘要、压缩心率趋势、运动后恢复窗口、训练前身体信号、近期或同类型训练背景、资料卡，以及用户在训练复盘补充中主动填写的内容。App 不会因为开启自动分析而发送 Apple ID、通讯录、精确位置、HealthKit 全量原始记录或未授权数据。
+      </p>
+      <p>
+        iOS 不保证第三方 App 精确后台准点执行，因此每日自动分析可能在 App 打开或回到前台时补跑。通知权限仅用于提醒用户分析已完成或提醒用户打开 App 补跑到期分析；通知内容只包含分析完成或打开 App 的提示，不包含完整健康数据。若用户拒绝通知权限，分析结果仍会保存在 App 内。
+      </p>
+
       <h2>AI Token 与第三方 AI 服务</h2>
       <p>
         App 支持用户自行选择第三方 AI 服务商并填写 API Token，例如 DeepSeek、通义千问、智谱 GLM、Moonshot、硅基流动、兼容 API 接口或用户自定义服务。Token 保存在用户设备本机 Keychain，仅用于向用户选择的 AI 服务商发起请求。
@@ -113,10 +124,10 @@
         AI 请求会携带用户配置的 API Token。第三方 AI 服务商可能依据其隐私政策和账户体系，将收到的请求及其中的数据关联到该 Token 所属的服务商账户。用户应查看所选服务商的隐私政策、数据保留规则和服务条款。
       </p>
       <p>
-        只有当用户主动发起 AI 分析，并在应用内确认“Agree and Send to Third-Party AI”或同等含义的发送确认按钮后，应用才会把本次 AI 分析所需的数据发送给用户选择的第三方 AI 服务商。用户可以在发送前取消；如果用户取消，应用不会向第三方 AI 服务发送本次健康数据。
+        当用户主动发起 AI 分析时，只有在应用内确认“Agree and Send to Third-Party AI”或同等含义的发送确认按钮后，应用才会把本次 AI 分析所需的数据发送给用户选择的第三方 AI 服务商。用户可以在发送前取消；如果用户取消，应用不会向第三方 AI 服务发送本次健康数据。若用户主动开启自动分析功能，则表示用户同意 App 在对应触发条件满足时自动发送该次分析所需的健康摘要；用户可以随时关闭自动分析。
       </p>
       <p>
-        发送前的确认界面会显示接收方（AI 服务商、模型和 API 主机）、发送的数据类别、用途，以及不会发送的数据。可能发送的数据包括：所选 HealthKit 指标的摘要、长期统计特征、近期日级证据、分段趋势、今日小时级节奏、锻炼摘要、压缩心率趋势、运动后恢复窗口、资料卡信息、分析侧重点和上一条 AI 分析的压缩摘要。应用不会发送 Apple ID、通讯录、精确定位、HealthKit 全量原始记录或用户未授权的数据。
+        发送前的确认界面会显示接收方（AI 服务商、模型和 API 主机）、发送的数据类别、用途，以及不会发送的数据。可能发送的数据包括：所选 HealthKit 指标的摘要、长期统计特征、近期日级证据、分段趋势、跨指标个人模式证据矩阵和候选、今日小时级节奏、锻炼摘要、压缩心率趋势、运动后恢复窗口、训练前 72 小时身体信号、近期或同类型训练背景、用户资料卡信息、用户在训练复盘补充中主动填写的内容、分析侧重点和上一条 AI 分析的压缩摘要。应用不会发送 Apple ID、通讯录、精确定位、HealthKit 全量原始记录或用户未授权的数据。
       </p>
       <p>
         第三方 AI 服务仅用于生成用户本次请求的 AI 分析。Self Researcher 要求第三方 AI 服务对接收到的数据提供与本政策相同或同等水平的保护，不得将这些数据用于广告、营销或跨 App 跟踪。用户配置自定义接口时，应确认该接口由自己控制或由自己信任的服务商提供，并阅读对应服务商的隐私政策和服务条款。
@@ -124,7 +135,7 @@
 
       <h2>数据存储</h2>
       <p>
-        健康趋势、分析记录、AI 配置、API Token 和用户资料主要保存在设备本机。API Token 保存在 Keychain 中。我们不运营独立服务器来集中存储用户健康数据。
+        健康趋势、分析记录、运动复盘、自动分析设置、AI 配置、API Token、用户资料和用户主动填写的训练复盘补充主要保存在设备本机。API Token 保存在 Keychain 中。我们不运营独立服务器来集中存储用户健康数据。
       </p>
       <p>
         第三方 AI 服务对其接收到的数据的处理和保留受其自身隐私政策和服务条款约束。Self Researcher 不会从第三方 AI 服务处取回并集中保存用户健康数据。
@@ -132,7 +143,7 @@
 
       <h2>用户控制与删除</h2>
       <p>
-        用户可以在 Apple Health 中管理或撤销 HealthKit 授权，也可以在 App 内修改 AI 模型配置、停止发起 AI 分析，或删除本机保存的分析记录。删除 App 通常会移除设备上的 App 本地数据；HealthKit 中原有的 Apple Health 数据仍由 Apple Health 管理。
+        用户可以在 Apple Health 中管理或撤销 HealthKit 授权，也可以在 App 内修改 AI 模型配置、停止发起 AI 分析、关闭自动分析、关闭通知、调整自动分析触发条件，或删除本机保存的分析记录和运动复盘。删除 App 通常会移除设备上的 App 本地数据；HealthKit 中原有的 Apple Health 数据仍由 Apple Health 管理。
       </p>
       <p>
         如需协助删除本机数据、反馈隐私问题或咨询数据使用方式，可以通过本政策底部的联系方式联系我们。
@@ -145,7 +156,7 @@
 
       <h2>English Summary for App Review</h2>
       <p>
-        Self Researcher reads user-authorized Apple Health data such as steps, heart rate, resting heart rate, HRV, sleep, active energy, exercise minutes, workout records, walking/running distance, respiratory rate, and oxygen saturation for health and fitness features. Workout recovery also reads in-workout heart rate and a short heart-rate window within 3 minutes after the workout ends. The app stores optional user-entered profile details, AI model configuration, analysis history, workout AI reviews, and subscription status on the user’s device. Age and gender are optional; users can skip them and use a broad adult reference, then add or change them later in Settings. HealthKit workout and heart-rate samples are re-read from Apple Health rather than retained as a long-term duplicate.
+        Self Researcher reads user-authorized Apple Health data such as steps, heart rate, resting heart rate, HRV, sleep, active energy, exercise minutes, workout records, walking/running distance, respiratory rate, and oxygen saturation for health and fitness features. Workout recovery also reads in-workout heart rate and a short heart-rate window within 3 minutes after the workout ends. The app stores optional user-entered profile details, optional workout review supplement answers, AI model configuration, automation settings, analysis history, workout AI reviews, and subscription status on the user’s device. Optional workout review supplement answers may include the training goal, training type or body area, perceived effort, body feeling, and next plan. Age, gender, and workout supplement answers are optional. HealthKit workout and heart-rate samples are re-read from Apple Health rather than retained as a long-term duplicate.
       </p>
       <p>
         The app uses this data for on-device trend display, personal baselines, long-range statistical features, workout recovery and sleep references, and AI analysis that the user manually requests. Workout recovery only reads workouts that already exist in Apple Health; the app does not create, modify, or delete Apple Health workouts, and the Apple Watch app does not start an additional temporary workout. Health data is not used for advertising, marketing, cross-app tracking, or sale.
@@ -154,19 +165,22 @@
         The app supports user-selected third-party AI providers, including DeepSeek, Qwen, Zhipu GLM, Moonshot, SiliconFlow, compatible API endpoints, or a custom endpoint. API tokens are stored locally in the device Keychain and are used only for requests to the provider selected by the user.
       </p>
       <p>
+        The app also supports optional automations. Users may enable a daily deep analysis at a selected time or enable new-workout analysis when a newly detected Apple Fitness/Apple Health workout exceeds the user-selected minimum duration. Automations are off by default and can be turned off or adjusted at any time. When an automation is triggered, the app sends only the health summary needed for that specific analysis to the user-selected AI provider. iOS may run due automations when the app opens or returns to the foreground. Notification permission is used only to notify that an analysis is complete or to remind the user to open the app for a due analysis; notifications do not contain full health data.
+      </p>
+      <p>
         AI requests use the API token configured by the user. Under the selected provider’s privacy policy and account system, the provider may associate a request and its data with the provider account represented by that token. Users should review the selected provider’s privacy policy, retention practices, and terms.
       </p>
       <p>
-        The app sends summarized health data to a third-party AI service only after the user manually starts an AI analysis and explicitly taps “Agree and Send to Third-Party AI” or an equivalent consent button in the app. Before sending, the app identifies the recipient, including the AI provider, model, and API host, explains the data categories sent, states the purpose, and identifies data that is not sent. If the user cancels, the app does not send the health data to the third-party AI service.
+        When the user manually starts an AI analysis, the app sends summarized health data to a third-party AI service only after the user explicitly taps “Agree and Send to Third-Party AI” or an equivalent consent button in the app. If the user enables automation, the user consents to sending the health summary needed for the corresponding automated analysis when its trigger condition is met. Before manual sending, the app identifies the recipient, including the AI provider, model, and API host, explains the data categories sent, states the purpose, and identifies data that is not sent. If the user cancels a manual request, the app does not send the health data to the third-party AI service.
       </p>
       <p>
-        Data that may be sent includes selected HealthKit metric summaries, long-range statistical features, recent daily evidence, segmented trends, today’s hourly rhythm, a workout summary, a compressed heart-rate trend, post-workout recovery windows, user profile details, selected analysis focus areas, and a compact summary of the previous AI analysis when used for comparison. The app does not send Apple ID, contacts, precise location, full raw HealthKit records, or unauthorized data.
+        Data that may be sent includes selected HealthKit metric summaries, long-range statistical features, recent daily evidence, segmented trends, cross-metric personal pattern evidence matrices and candidates, today’s hourly rhythm, a workout summary, a compressed heart-rate trend, post-workout recovery windows, pre-workout 72-hour body signals, recent or same-activity workout context, user profile details, optional workout review supplement answers, selected analysis focus areas, and a compact summary of the previous AI analysis when used for comparison. The app does not send Apple ID, contacts, precise location, full raw HealthKit records, or unauthorized data.
       </p>
       <p>
         The third-party AI service is used only to generate the user-requested AI analysis. Self Researcher requires third-party AI services that receive this data to provide the same or equal privacy and security protection as described in this policy and not to use the data for advertising, marketing, or cross-app tracking. If the user configures a custom endpoint, the user should confirm that the endpoint is controlled by them or provided by a trusted service provider and review that provider’s privacy policy and terms.
       </p>
       <p>
-        Self Researcher does not operate a server that centrally stores user health data. AI results are for wellness and lifestyle reference only and are not medical diagnosis, treatment advice, disease monitoring, or emergency medical service.
+        Self Researcher does not operate a server that centrally stores user health data. Health trends, analysis history, workout reviews, automation settings, AI configuration, API tokens, user profile details, and optional workout supplement answers are primarily stored on the user’s device. AI results are for wellness and lifestyle reference only and are not medical diagnosis, treatment advice, disease monitoring, or emergency medical service.
       </p>
 
       <h2>联系我们</h2>
