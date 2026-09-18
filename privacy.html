@@ -84,7 +84,7 @@
   <main>
     <article>
       <h1>隐私政策</h1>
-      <p>生效日期：2026 年 7 月 1 日</p>
+      <p>生效日期：2026 年 9 月 18 日</p>
 
       <h2>我们收集哪些数据</h2>
       <p>
@@ -105,7 +105,7 @@
         HealthKit 数据和用户资料会用于生成健康趋势、个人基线、长期统计特征、今日活动节奏、恢复和睡眠参考，以及用户主动发起的 AI 分析。订阅版可以在设备本机比较每日感受或心境日级摘要与睡眠、活动、日照和正念等日级摘要，并只生成压缩后的个人模式候选。应用不会仅根据 HRV、心率或睡眠推断用户真实的心情、压力或疲劳。Self Researcher 的分析结果仅供健康管理和生活方式参考，不构成医疗诊断、治疗建议、疾病监测或紧急医疗服务。
       </p>
       <p>
-        Self Researcher 不会将 HealthKit 数据、AI 分析内容或用户资料用于广告、营销、跨 App 跟踪或出售。应用不读取 Apple ID、通讯录或精确定位，也不会发送未经授权的数据。
+        Self Researcher 不会将 HealthKit 数据、AI 分析内容或用户资料用于广告、营销、跨 App 跟踪或出售。应用不读取 Apple ID 密码、通讯录或精确定位，也不会发送未经授权的数据。Apple 登录使用 Apple 提供的专属标识验证身份。
       </p>
 
       <h2>自动分析与通知</h2>
@@ -136,12 +136,18 @@
         第三方 AI 服务仅用于生成用户本次请求的 AI 分析。Self Researcher 要求第三方 AI 服务对接收到的数据提供与本政策相同或同等水平的保护，不得将这些数据用于广告、营销或跨 App 跟踪。用户配置自定义接口时，应确认该接口由自己控制或由自己信任的服务商提供，并阅读对应服务商的隐私政策和服务条款。
       </p>
 
+      <h2>账号与服务端托管分析</h2>
+      <p>Apple 登录会在服务端建立账号。我们保存经保护的 Apple 专属标识、内部用户标识、会员与使用额度、必要的交易记录；开启完成提醒时，还会保存推送设备标识。我们不把 Apple 登录标识或支付信息放入 AI 分析内容。</p>
+      <p>托管 AI 与自备 Token 直连是不同的处理方式：托管分析先将你授权的健康摘要发送到 Self Researcher 服务端，再由服务端使用托管凭据请求确认页展示的 AI 服务商和模型。服务端凭据不会下发给 App。自备 Token 分析则使用你选择的服务商和本机 Keychain 中的凭据。发送前可以取消；自动分析另需明确开启。</p>
+      <p>托管分析源摘要和恢复任务所需的中间状态采用加密存储，源数据有效期为提交后 2 小时；任务完成后清理源内容。结果有效期为完成后 24 小时，App 确认保存后可提前清理。过期内容由定期任务清理，服务故障时清理可能延迟。必要的任务状态、额度及安全运维记录与健康原文分开处理。数据库备份可能保留清理前的副本，仅用于受限的故障恢复，不用于 AI 分析、广告或营销；删除要求在恢复数据后仍需执行。</p>
+      <p>你可以在 App 的 Apple 账户页面发起删除服务端账号，清除云端分析内容和身份关联。Apple Health 与本机分析记录不会因此被删除，可分别在 Apple Health 和 App 中管理。删除账号不会自动取消 Apple 订阅，请同时在系统订阅页面管理自动续订。必要的去标识交易或审计记录可能为财务、安全及法律要求保留。</p>
+
       <h2>数据存储</h2>
       <p>
-        健康趋势、分析记录、运动复盘、自动分析设置、AI 配置、API Token、用户资料、每日感受和用户主动填写的训练复盘补充主要保存在设备本机。API Token 保存在 Keychain 中。我们不运营独立服务器来集中存储用户健康数据。
+        健康趋势、分析记录、运动复盘、自动分析设置、AI 配置、API Token、用户资料、每日感受和用户主动填写的训练复盘补充主要保存在设备本机。API Token 保存在 Keychain 中。使用托管 AI 时，必要的健康摘要会经过 Self Researcher 服务端临时加密处理，详见下方说明。
       </p>
       <p>
-        第三方 AI 服务对其接收到的数据的处理和保留受其自身隐私政策和服务条款约束。Self Researcher 不会从第三方 AI 服务处取回并集中保存用户健康数据。
+        第三方 AI 服务对其接收到的数据的处理和保留受其自身隐私政策和服务条款约束。托管分析结果会经 Self Researcher 服务端返回 App，并按下述期限清理。
       </p>
 
       <h2>用户控制与删除</h2>
@@ -154,7 +160,7 @@
 
       <h2>订阅与付款</h2>
       <p>
-        订阅购买、续订、退款和取消由 Apple App Store 处理。App 仅通过 StoreKit 读取订阅状态，用于解锁全部可用历史特征萃取和高阶统计。
+        订阅购买、续订、退款和取消由 Apple App Store 处理。App 通过 StoreKit 获取交易凭据，服务端验证凭据并保存必要的商品、交易、有效期和退款状态，以关联会员权益、额度和恢复购买；我们不接收银行卡信息。
       </p>
 
       <h2>English Summary for App Review</h2>
@@ -186,8 +192,13 @@
         The third-party AI service is used only to generate the user-requested AI analysis. Self Researcher requires third-party AI services that receive this data to provide the same or equal privacy and security protection as described in this policy and not to use the data for advertising, marketing, or cross-app tracking. If the user configures a custom endpoint, the user should confirm that the endpoint is controlled by them or provided by a trusted service provider and review that provider’s privacy policy and terms.
       </p>
       <p>
-        Self Researcher does not operate a server that centrally stores user health data. Health trends, analysis history, workout reviews, automation settings, AI configuration, API tokens, user profile details, daily check-ins, and optional workout supplement answers are primarily stored on the user’s device. Premium analysis may compare daily check-ins or State of Mind daily summaries with daily sleep and activity summaries on device and send only compressed pattern candidates. The app does not treat HRV or heart rate as the user’s actual emotion. AI results are for wellness and lifestyle reference only and are not medical diagnosis, treatment advice, disease monitoring, or emergency medical service.
+        Managed AI uses Self Researcher servers for temporary encrypted processing of necessary health summaries, as described below. Health trends, analysis history, workout reviews, automation settings, AI configuration, API tokens, user profile details, daily check-ins, and optional workout supplement answers are primarily stored on the user’s device. Premium analysis may compare daily check-ins or State of Mind daily summaries with daily sleep and activity summaries on device and send only compressed pattern candidates. The app does not treat HRV or heart rate as the user’s actual emotion. AI results are for wellness and lifestyle reference only and are not medical diagnosis, treatment advice, disease monitoring, or emergency medical service.
       </p>
+
+      <p>Managed AI and bring-your-own-token analysis use different processing paths. With managed AI, authorized health summaries are sent to Self Researcher servers and then to the AI provider and model shown in the consent screen, using server-managed credentials. These credentials are never delivered to the app. With a personal token, requests use the selected provider and credentials stored in Keychain. Manual sending requires confirmation; automation requires separate opt-in.</p>
+      <p>Sign in with Apple creates a server account using a protected Apple-specific identifier and an internal user ID. We maintain membership, quota and necessary transaction records, and device push identifiers when completion notifications are enabled. Apple sign-in identifiers and payment details are not included in AI prompts. Apple processes payments; we do not receive card details.</p>
+      <p>Managed source summaries and processing checkpoints are encrypted. Source data expires 2 hours after submission and is cleared on task completion. Results expire 24 hours after completion and may be cleared earlier after the app confirms local saving. Scheduled cleanup may be delayed during an outage. Backups may retain earlier copies solely for restricted disaster recovery; deletion requirements must still be applied after restoration. Task status, quota and security records are handled separately from health content.</p>
+      <p>Account deletion is available in the app's Apple account page and clears cloud analysis content and identity associations. It does not delete Apple Health or local app records or cancel an Apple subscription. Manage those separately in Apple Health, the app, or Apple's subscription settings. Necessary de-identified transaction or audit records may be retained for financial, security or legal requirements.</p>
 
       <h2>联系我们</h2>
       <p>
